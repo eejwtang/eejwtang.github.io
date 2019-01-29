@@ -45,7 +45,7 @@
   <h1 class="post-title">Hexo+Coding create blog</h1>
   <section class="post-content article-entry">
     <p>本文基于Hexo框架和Coding Pages服务搭建个人Blog。</p>
-<h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><ul>
+<h4 id="1-工具："><a href="#1-工具：" class="headerlink" title="1. 工具："></a>1. 工具：</h4><ul>
 <li><p><strong>Hexo</strong></p>
 <p>  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </li>
@@ -53,61 +53,60 @@
 <p>  利用Coding/GitHub等git托管服务商提供的免费静态网站托管服务</p>
 </li>
 </ul>
-<h4 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h4><ul>
-<li><h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5>这个不多介绍</li>
-<li><h5 id="Mac电脑安装homebrew"><a href="#Mac电脑安装homebrew" class="headerlink" title="Mac电脑安装homebrew"></a>Mac电脑安装homebrew</h5>Homebrew是Mac OSX上的软件包管理工具参考<a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>网站，只需在终端下输入如下指令就可以完成安装。    <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-搭建流程"><a href="#2-搭建流程" class="headerlink" title="2. 搭建流程"></a>2. 搭建流程</h4><ul>
+<li><h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><p>  这个不多介绍</p>
+</li>
+<li><h5 id="Mac电脑安装homebrew"><a href="#Mac电脑安装homebrew" class="headerlink" title="Mac电脑安装homebrew"></a>Mac电脑安装homebrew</h5><p>Homebrew是Mac OSX上的软件包管理工具参考<a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>网站，只需在终端下输入如下指令就可以完成安装。    </p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<blockquote>
 <p>Homebrew的常用指令:</p>
-</blockquote>
-<blockquote>
-<ul>
-<li>安装软件：brew install 软件名，例：brew install wget</li>
-<li>搜索软件：brew search 软件名，例：brew search wget</li>
-<li>卸载软件：brew uninstall 软件名，例：brew uninstall wget</li>
-<li>更新所有软件：brew update</li>
-</ul>
-</blockquote>
-<ul>
+<pre><code>-  安装软件：brew install 软件名，例：brew install wget
+- 搜索软件：brew search 软件名，例：brew search wget
+- 卸载软件：brew uninstall 软件名，例：brew uninstall wget
+- 更新所有软件：brew update
+</code></pre><ul>
 <li><h5 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h5><p>  有了Homebrew，安装node.js就很方便了也是只需要在终端输入一条指令：</p>
-<pre><code><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
-</code></pre><p>  安装node的同时会安装npm。</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
+<p>  安装node的同时会安装npm。</p>
 </li>
 <li><h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><p>  到这里电脑中就已经安装上述必备程序，接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
 <ul>
-<li>npm安装hexo环境</li>
-</ul>
+<li><p>npm安装hexo环境</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化指定的blog文件夹</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化完成后，指定文件夹的目录如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输入下面的指令Hexo会在本地启动一个服务器，就可以在本地预览自己的博客啦。默认默认情况下，访问网址为：<code>http://localhost:4000/</code>。注意，hexo开头的命令，执行目录必须是你创建的博客文件夹目录。</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate <span class="comment">#可以简写成hexo g</span></span><br><span class="line">   $ hexo server	<span class="comment">#可以简写成hexo s</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>到这里Hexo环境就搭建好了,下面我们配置博客同步到Coding Pages</p>
 </li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<pre><code>- 初始化指定的blog文件夹
-
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-- 初始化完成后，指定文件夹的目录如下：
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-- 输入下面的指令Hexo会在本地启动一个服务器，就可以在本地预览自己的博客啦。默认默认情况下，访问网址为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```sh</span><br><span class="line">$ hexo generate #可以简写成hexo g</span><br><span class="line">$ hexo server	#可以简写成hexo s</span><br></pre></td></tr></table></figure>
-
-- 到这里Hexo环境就搭建好了,下面我们配置博客同步到Coding Pages
-</code></pre><ul>
+</li>
 <li><h5 id="同步到Cofing-Pages"><a href="#同步到Cofing-Pages" class="headerlink" title="同步到Cofing Pages"></a>同步到Cofing Pages</h5><p>  首先在Coding Pages上有一个同名的项目Blog，并且开启了Coding Pages服务。以上完成，只需要修改hexo的配置文件即可。</p>
 <ul>
-<li><p>配置_config.yml<br>在刚刚初始化的blog文件夹中找到“deploy”，type填git，repository填Coding/GitHub项目的git链接。可以配置多个git链接，也可以选择不同的分支。为什么要选择其他分支后面具体再讲。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   - <span class="built_in">type</span>: git</span><br><span class="line">    repo: <span class="comment">#我的Coding的git链接</span></span><br><span class="line">    branch: coding-pages</span><br><span class="line">  - <span class="built_in">type</span>: git</span><br><span class="line">    repo: <span class="comment">#可以选择其他git仓库的链接，git链接</span></span><br></pre></td></tr></table></figure>
+<li><p>配置_config.yml:<br>  在刚刚初始化的blog文件夹中找到“deploy”，type填git，repository填Coding/GitHub项目的git链接。可以配置多个git链接，也可以选择不同的分支。为什么要选择其他分支后面具体再讲。</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: #我的Coding的git链接</span><br><span class="line">    branch: coding-pages</span><br><span class="line">  - type: git</span><br><span class="line">    repo: #可以选择其他git仓库的链接，git链接</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>写作流程<br>配置好之后就可以愉快地用Markdown语法开始写作啦。</p>
+<li><p>写作流程<br>  配置好之后就可以愉快地用Markdown语法开始写作啦。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"文章标题"</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo g <span class="comment">#生成页面</span></span><br><span class="line">hexo d <span class="comment">#发布页面</span></span><br></pre></td></tr></table></figure>
-<p>到这里打开Coding/GitHub Pages的网址就能看到我们新生成的博客啦。</p>
+<p>  到这里打开Coding/GitHub Pages的网址就能看到我们新生成的博客啦。</p>
 </li>
-<li>折腾主题<br>Hexo用丰富的主题资源，GitHub中有一大票大牛做的主题可以慢慢折腾，只要把主题git到themes文件夹，并修改_config.yml中的theme项就可以了。折腾主题的时候，感觉回到了QQ空间的年代（大概是同一批人），我比较喜欢直观展现文章列表的主题，后面尝试自己写主题。</li>
+<li><p>折腾主题</p>
+<p>  Hexo用丰富的主题资源，GitHub中有一大票大牛做的主题可以慢慢折腾，只要把主题git到themes文件夹，并修改_config.yml中的theme项就可以了。折腾主题的时候，感觉回到了QQ空间的年代（大概是同一批人），我比较喜欢直观展现文章列表的主题，后面尝试自己写主题。</p>
+</li>
 </ul>
 </li>
 </ul>
-<h4 id="遇到的坑以及一些实用的功能"><a href="#遇到的坑以及一些实用的功能" class="headerlink" title="遇到的坑以及一些实用的功能"></a>遇到的坑以及一些实用的功能</h4><ul>
-<li><p>#####将自己的域名映射到Pages上<br>  Blog页面搭建好了，就可以把自己的域名映射到Pages上了，我是在GoDaddy上购买的域名，用DNSPod做域名解析。</p>
-</li>
+<h4 id="3-遇到的坑以及一些实用的功能"><a href="#3-遇到的坑以及一些实用的功能" class="headerlink" title="3. 遇到的坑以及一些实用的功能"></a>3. 遇到的坑以及一些实用的功能</h4><ul>
+<li><p>#####将自己的域名映射到Pages上</p>
+<pre><code>Blog页面搭建好了，就可以把自己的域名映射到Pages上了，我是在GoDaddy上购买的域名，用DNSPod做域名解析。
+</code></pre></li>
 <li><p>#####创建不同的分支管理源码<br>  直接使用<code>hexo d</code>上传的是blog网页展示的部分，跟本地文件夹中的源码是不一样的，如果换台电脑，没有这个源文件夹就不能继续写作了。Git强大的版本控制系统提供了代码分支的技术，我们可以把源码换到和静态页面不同的分支，以解决这个问题。</p>
 <p>  Coding的项目 Pages（即项目名称不为 &lt;个性后缀&gt;.coding.me）支持部署 coding-pages 分支和 master 分支。我们可以把刚刚的博客Pages部分的代码部署到coding-pages分支（在项目中创建该分支，并且在_config.yml中吧deploy中的branch改成coding-pages），空出来master默认分支来部署源码。</p>
 </li>
@@ -117,12 +116,12 @@
 <li><p>#####<em>TODO</em> 实时监控部署<br>这个还没实现，我思路是把Hexo搭建到VPS上，用类似坚果云的工具同步md文件，实现实时监控部署。应该还要更成熟的方案，有时间再找找。</p>
 </li>
 </ul>
-<h4 id="9012年了为什么还要自己搭一个博客"><a href="#9012年了为什么还要自己搭一个博客" class="headerlink" title="9012年了为什么还要自己搭一个博客"></a>9012年了为什么还要自己搭一个博客</h4><p>最早在公众号上关注了一位大神<a href="https://geekplux.com" target="_blank" rel="noopener">GeekPlux</a>，他在博客讲他的十年博客折腾历史，读来很受启发。自己搭建Blog，既Geek，又能帮助思考，还能分享知识，记录工作，emmmmm很棒。</p>
+<h4 id="4-9012年了为什么还要自己搭一个博客"><a href="#4-9012年了为什么还要自己搭一个博客" class="headerlink" title="4. 9012年了为什么还要自己搭一个博客"></a>4. 9012年了为什么还要自己搭一个博客</h4><p>最早在公众号上关注了一位大神<a href="https://geekplux.com" target="_blank" rel="noopener">GeekPlux</a>，他在博客讲他的十年博客折腾历史，读来很受启发。自己搭建Blog，既Geek，又能帮助思考，还能分享知识，记录工作，emmmmm很棒。</p>
 <p>新东方的艾力老师在讲34枚金币时间管理法的时候总会提到，没有记录就没有发生。人的大脑大概是一台复杂的高级处理器，但一定不是个可靠的信息存储设备，把最近折腾的东西记录下来，下次用到的时候可以随时回来翻，让大脑更专注于计算。</p>
 <p>一年的小学教师的经历，我很了解，把自己掌握的知识拿出来给别人讲一遍，能更加深对知识的理解。</p>
 <p>在互联网的海洋里找一个小角落，写点东西自娱自乐，反正这里没人跟你吵架。</p>
 <p>还有这样可以督促我练习写作，我的研究生导师如是说：“研究生读到最后你会发现写代码是最快乐的事情，写论文一定会比写代码痛苦的。”</p>
-<p>以上，万事开头难，总算写完第一篇。</p>
+<p><strong>以上，万事开头难，总算写完第一篇。</strong></p>
 <h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h4><ul>
 <li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo 快速、简介且高效的博客框架</a></li>
 <li><a href="https://www.jianshu.com/p/4e80b42823d5" target="_blank" rel="noopener">Homebrew的安装及使用</a></li>
